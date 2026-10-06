@@ -1,12 +1,12 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("org.jetbrains.kotlin.plugin.compose")
 }
 
 android {
     namespace="com.zripxplayz.jarvis"
     compileSdk=36
-
     defaultConfig {
         applicationId="com.zripxplayz.jarvis"
         minSdk=26
@@ -14,10 +14,7 @@ android {
         versionCode=1
         versionName="1.0.0"
     }
-
     buildFeatures { compose=true }
-    composeOptions { kotlinCompilerExtensionVersion="1.5.15" }
-
     packaging { resources.excludes += "/META-INF/{AL2.0,LGPL2.1}" }
 }
 
